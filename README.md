@@ -1,6 +1,6 @@
 <div align="center"><img src="readme_img/logo-aluralatam-oracle.svg" width="200"/><img src="readme_img/rh03-one-v-black-lad2.png" width="200"/></div>
 
-# 💱 Hotel Alura
+# 🏢 Hotel Alura
 
 <div align="center"><img src="src/hotel/sources/campana.png" width="80"/></div>
 
