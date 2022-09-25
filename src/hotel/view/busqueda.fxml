@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<VBox maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #D9C5AD;" stylesheets="@App.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel.controller.BusquedaController">
+   <children>
+      <VBox maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <Separator minHeight="20.0" opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="800.0" />
+            <HBox minHeight="80.0" prefHeight="80.0" prefWidth="800.0">
+               <children>
+                  <Separator opacity="0.0" prefHeight="80.0" prefWidth="55.0" />
+                  <ImageView fitHeight="79.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../sources/campana.png" />
+                     </image>
+                  </ImageView>
+                  <Separator opacity="0.0" prefHeight="80.0" prefWidth="41.0" />
+                  <Label alignment="CENTER" prefHeight="80.0" prefWidth="301.0" text="SISTEMA DE BUSQUEDA">
+                     <font>
+                        <Font name="Georgia Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator opacity="0.0" prefHeight="80.0" prefWidth="22.0" />
+                  <VBox prefHeight="80.0" prefWidth="266.0">
+                     <children>
+                        <Separator minHeight="10.0" opacity="0.0" orientation="VERTICAL" prefHeight="10.0" prefWidth="312.0" />
+                        <TextField fx:id="buscarTF" alignment="CENTER" onKeyReleased="#handlerBuscarTF" prefHeight="49.0" prefWidth="266.0" promptText="¿Que desea buscar?" styleClass="textField_hotel" />
+                        <Separator minHeight="5.0" opacity="0.0" orientation="VERTICAL" prefHeight="5.0" prefWidth="312.0" />
+                        <Label prefHeight="33.0" prefWidth="299.0" text="*Busqueda por apellido o por numero de reserva" wrapText="true">
+                           <font>
+                              <Font name="Georgia" size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator minHeight="10.0" opacity="0.0" orientation="VERTICAL" prefHeight="10.0" prefWidth="312.0" />
+                     </children>
+                  </VBox>
+                  <Separator opacity="0.0" prefHeight="80.0" prefWidth="38.0" />
+               </children>
+            </HBox>
+            <Separator minHeight="20.0" opacity="0.0" orientation="VERTICAL" prefHeight="0.0" prefWidth="800.0" />
+            <HBox prefHeight="363.0" prefWidth="800.0">
+               <children>
+                  <Separator minWidth="15.0" opacity="0.0" prefHeight="371.0" prefWidth="15.0" />
+                  <TabPane prefHeight="361.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="HuespedesTab" text="Huespedes">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="281.0" prefWidth="800.0">
+                                 <children>
+                                    <TableView fx:id="huespedesTableView" prefHeight="268.0" prefWidth="770.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="idHuespedCol" prefWidth="23.0" text="ID" />
+                                        <TableColumn fx:id="nameHuespedCol" prefWidth="100.0" text="NOMBRE" />
+                                          <TableColumn fx:id="apellidoHuespedCol" prefWidth="105.0" text="APELLIDO" />
+                                          <TableColumn fx:id="fnacHuespedCol" prefWidth="183.0" text="FECHA DE NACIMIENTO" />
+                                          <TableColumn fx:id="nacionHuespedCol" prefWidth="129.0" text="NACIONALIDAD" />
+                                          <TableColumn fx:id="telHuespedCol" prefWidth="87.0" text="TELEFONO" />
+                                          <TableColumn fx:id="nroResHuespedCol" prefWidth="142.0" text="NRO. DE RESERVA" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="ReservasTab" text="Reservas">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="reservasTableView" prefHeight="268.0" prefWidth="770.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="nroResReservasCol" prefWidth="152.0" text="NRO. DE RESERVA" />
+                                        <TableColumn fx:id="fechaInReservasCol" prefWidth="162.0" text="FECHA DE ENTRADA" />
+                                          <TableColumn fx:id="fechaOutReservasCol" prefWidth="150.0" text="FECHA DE SALIDA" />
+                                          <TableColumn fx:id="valorReservasCol" prefWidth="167.0" text="VALOR DE RESERVA" />
+                                          <TableColumn fx:id="pagoReservasCol" prefWidth="138.0" text="FORMA DE PAGO" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                  <Separator minWidth="15.0" opacity="0.0" prefHeight="345.0" prefWidth="15.0" />
+               </children>
+            </HBox>
+            <Separator minHeight="20.0" opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="800.0" />
+            <HBox prefHeight="89.0" prefWidth="800.0">
+               <children>
+                  <Separator opacity="0.0" prefHeight="33.0" prefWidth="700.0" />
+                  <Button minWidth="80.0" mnemonicParsing="false" onAction="#handlerEditBtn" prefHeight="31.0" prefWidth="80.0" styleClass="hotelBtn" text="Editar" />
+                  <Separator minWidth="10.0" opacity="0.0" prefHeight="33.0" prefWidth="10.0" />
+                  <Button minWidth="80.0" mnemonicParsing="false" onAction="#handlerEliminarBtn" prefHeight="31.0" prefWidth="80.0" styleClass="hotelBtn" text="Eliminar" />
+                  <Separator minWidth="15.0" opacity="0.0" prefHeight="79.0" prefWidth="15.0" />
+               </children>
+            </HBox>
+            <Separator minHeight="20.0" opacity="0.0" orientation="VERTICAL" prefHeight="0.0" prefWidth="800.0" />
+         </children>
+      </VBox>
+      <HBox prefHeight="49.0" prefWidth="800.0" translateX="714.0" translateY="-500.0">
+         <children>
+            <Button id="backWindow" fx:id="backWindow" minHeight="30.0" mnemonicParsing="false" onAction="#handlerBackMenu" prefHeight="54.0" prefWidth="58.0" text="Volver">
+               <font>
+                  <Font name="Georgia" size="13.0" />
+               </font>
+            </Button>
+            <Button id="closeWindow" fx:id="closeWindow" minHeight="30.0" mnemonicParsing="false" onAction="#handlerCloseWindow" prefHeight="80.0" prefWidth="29.0" text="X">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<VBox maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" stylesheets="@App.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel.controller.SistemaReservasController">
+   <children>
+      <HBox prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <Accordion fx:id="accordionSis">
+              <panes>
+                <TitledPane fx:id="SisResTitledPane" onMouseClicked="#handlerPaneReserva" text="Sistema de reservas">
+                     <content>
+                        <VBox alignment="CENTER" minHeight="434.0" prefHeight="434.0" prefWidth="466.0" style="-fx-background-color: #D9C5AD;">
+                           <children>
+                              <Separator minHeight="0.0" opacity="0.0" orientation="VERTICAL" prefHeight="0.0" prefWidth="578.0" />
+                              <VBox prefHeight="74.0" prefWidth="442.0" style="-fx-background-color: #402B19;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="104.0" prefWidth="442.0" text="Sistema de reservas" textFill="WHITE">
+                                       <font>
+                                          <Font name="Georgia Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Separator minHeight="20.0" opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="578.0" />
+                              <HBox prefHeight="61.0" prefWidth="466.0">
+                                 <children>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="63.0" prefWidth="100.0" />
+                                    <VBox prefHeight="84.0" prefWidth="236.0">
+                                       <children>
+                                          <Label prefHeight="21.0" prefWidth="296.0" text="FECHA DE CHECK IN" textFill="#402b19">
+                                             <font>
+                                                <Font name="Georgia" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="fechaIn" editable="false" prefHeight="31.0" prefWidth="386.0" promptText="Seleccione la fecha de entrada" />
+                                       </children>
+                                    </VBox>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="50.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                              <Separator minHeight="20.0" opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="578.0" />
+                              <HBox prefHeight="61.0" prefWidth="466.0">
+                                 <children>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="98.0" prefWidth="100.0" />
+                                    <VBox prefHeight="84.0" prefWidth="236.0">
+                                       <children>
+                                          <Label prefHeight="21.0" prefWidth="296.0" text="FECHA DE CHECK OUT" textFill="#402b19">
+                                             <font>
+                                                <Font name="Georgia" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="fechaOut" editable="false" prefHeight="31.0" prefWidth="386.0" promptText="Seleccione la fecha de salida" />
+                                       </children>
+                                    </VBox>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="116.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                              <Separator minHeight="20.0" opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="578.0" />
+                              <HBox prefHeight="61.0" prefWidth="466.0">
+                                 <children>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="130.0" prefWidth="100.0" />
+                                    <VBox prefHeight="30.0" prefWidth="236.0">
+                                       <children>
+                                          <Label prefHeight="21.0" prefWidth="296.0" text="VALOR DE LA RESERVA" textFill="#402b19">
+                                             <font>
+                                                <Font name="Georgia" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="24.0" prefWidth="236.0">
+                                             <children>
+                                                <Label text="\$">
+                                                   <font>
+                                                      <Font name="Georgia Italic" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="precioTextField" alignment="CENTER" prefHeight="27.0" prefWidth="248.0" promptText="Ingrese el costo de la reserva" styleClass="textField_hotel" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="123.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                              <Separator minHeight="20.0" opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="578.0" />
+                              <HBox prefHeight="55.0" prefWidth="442.0">
+                                 <children>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="110.0" prefWidth="100.0" />
+                                    <VBox prefHeight="52.0" prefWidth="236.0">
+                                       <children>
+                                          <Label prefHeight="21.0" prefWidth="296.0" text="FORMA DE PAGO" textFill="#402b19">
+                                             <font>
+                                                <Font name="Georgia" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="comboBoxMpago" prefHeight="31.0" prefWidth="370.0" promptText="Seleccion su metodo de pago" />
+                                       </children>
+                                    </VBox>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="121.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                              <Separator minHeight="20.0" opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="578.0" />
+                              <HBox prefHeight="42.0" prefWidth="442.0">
+                                 <children>
+                                    <Separator opacity="0.0" prefHeight="71.0" prefWidth="200.0" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#handlerContinuarRegistro" prefHeight="31.0" prefWidth="265.0" styleClass="hotelBtn" text="Generar Nro. de Reserva" />
+                                    <Separator opacity="0.0" prefHeight="59.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                              <Separator opacity="0.0" orientation="VERTICAL" prefHeight="0.0" prefWidth="578.0" />
+                           </children>
+                        </VBox>
+                     </content>
+                </TitledPane>
+                  <TitledPane fx:id="SisHuespedTitledPane" layoutX="10.0" layoutY="10.0" onMouseClicked="#handlerPaneHuesped" text="Registro de huesped">
+                     <content>
+                        <VBox alignment="CENTER" minHeight="434.0" prefHeight="434.0" prefWidth="466.0" style="-fx-background-color: #D9C5AD;">
+                           <children>
+                              <VBox prefHeight="48.0" prefWidth="442.0" style="-fx-background-color: #402B19;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="63.0" prefWidth="442.0" text="Registro de huésped" textFill="WHITE">
+                                       <font>
+                                          <Font name="Georgia Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Separator minHeight="5.0" opacity="0.0" orientation="VERTICAL" prefHeight="5.0" prefWidth="578.0" />
+                              <HBox prefHeight="61.0" prefWidth="466.0">
+                                 <children>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="63.0" prefWidth="100.0" />
+                                    <VBox prefHeight="84.0" prefWidth="236.0">
+                                       <children>
+                                          <Label prefHeight="21.0" prefWidth="296.0" text="NOMBRE" textFill="#402b19">
+                                             <font>
+                                                <Font name="Georgia" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="nameHuespedTF" alignment="CENTER" prefHeight="27.0" prefWidth="248.0" promptText="Ingrese un nombre" styleClass="textField_hotel" />
+                                       </children>
+                                    </VBox>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="50.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                              <Separator minHeight="5.0" opacity="0.0" orientation="VERTICAL" prefHeight="5.0" prefWidth="578.0" />
+                              <HBox prefHeight="61.0" prefWidth="466.0">
+                                 <children>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="63.0" prefWidth="100.0" />
+                                    <VBox prefHeight="84.0" prefWidth="236.0">
+                                       <children>
+                                          <Label prefHeight="21.0" prefWidth="296.0" text="APELLIDO" textFill="#402b19">
+                                             <font>
+                                                <Font name="Georgia" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="lnameHuespedTF" alignment="CENTER" prefHeight="27.0" prefWidth="248.0" promptText="Ingrese el apellido del huesped" styleClass="textField_hotel" />
+                                       </children>
+                                    </VBox>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="50.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                              <Separator minHeight="5.0" opacity="0.0" orientation="VERTICAL" prefHeight="5.0" prefWidth="578.0" />
+                              <HBox prefHeight="61.0" prefWidth="466.0">
+                                 <children>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="98.0" prefWidth="100.0" />
+                                    <VBox prefHeight="53.0" prefWidth="285.0">
+                                       <children>
+                                          <Label prefHeight="21.0" prefWidth="296.0" text="FECHA DE NACIMIENTO" textFill="#402b19">
+                                             <font>
+                                                <Font name="Georgia" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="fechaNac" editable="false" prefHeight="31.0" prefWidth="386.0" promptText="Ingrese una fecha de nacimiento" />
+                                       </children>
+                                    </VBox>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="116.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                              <Separator minHeight="5.0" opacity="0.0" orientation="VERTICAL" prefHeight="5.0" prefWidth="578.0" />
+                              <HBox prefHeight="55.0" prefWidth="442.0">
+                                 <children>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="110.0" prefWidth="100.0" />
+                                    <VBox prefHeight="47.0" prefWidth="255.0">
+                                       <children>
+                                          <Label prefHeight="21.0" prefWidth="296.0" text="NACIONALIDAD" textFill="#402b19">
+                                             <font>
+                                                <Font name="Georgia" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="comboBoxNacionalidades" prefHeight="31.0" prefWidth="370.0" promptText="Ingrese una nacionalidad" />
+                                       </children>
+                                    </VBox>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="121.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                              <Separator minHeight="5.0" opacity="0.0" orientation="VERTICAL" prefHeight="5.0" prefWidth="578.0" />
+                              <HBox prefHeight="61.0" prefWidth="466.0">
+                                 <children>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="130.0" prefWidth="100.0" />
+                                    <VBox prefHeight="84.0" prefWidth="236.0">
+                                       <children>
+                                          <Label alignment="BOTTOM_LEFT" prefHeight="21.0" prefWidth="296.0" text="TELEFONO" textFill="#402b19">
+                                             <font>
+                                                <Font name="Georgia" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <TextField fx:id="telefonoHuespedTF" alignment="CENTER" prefHeight="27.0" prefWidth="248.0" promptText="Ingrese un telefono" styleClass="textField_hotel" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="123.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                              <Separator minHeight="5.0" opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="578.0" />
+                              <HBox prefHeight="61.0" prefWidth="466.0">
+                                 <children>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="130.0" prefWidth="100.0" />
+                                    <VBox prefHeight="84.0" prefWidth="236.0">
+                                       <children>
+                                          <Label prefHeight="21.0" prefWidth="296.0" text="NUMERO DE RESERVA" textFill="#402b19">
+                                             <font>
+                                                <Font name="Georgia" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <TextField fx:id="nroReservaTF" alignment="CENTER" editable="false" prefHeight="27.0" prefWidth="248.0" styleClass="textField_hotel" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator minWidth="100.0" opacity="0.0" prefHeight="123.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                              <Separator minHeight="5.0" opacity="0.0" orientation="VERTICAL" prefHeight="5.0" prefWidth="578.0" />
+                              <HBox prefHeight="42.0" prefWidth="442.0">
+                                 <children>
+                                    <Separator opacity="0.0" prefHeight="71.0" prefWidth="200.0" />
+                                    <Button fx:id="reservarBtn" alignment="CENTER" mnemonicParsing="false" onAction="#handlerRegistrarReserva" prefHeight="31.0" prefWidth="171.0" styleClass="hotelBtn" text="Reservar" />
+                                    <Separator opacity="0.0" prefHeight="59.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+            <ImageView fitHeight="500.0" fitWidth="334.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sources/reserva.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox prefHeight="49.0" prefWidth="800.0" translateX="714.0" translateY="-500.0">
+         <children>
+            <Button id="backWindow" fx:id="backWindow" minHeight="30.0" mnemonicParsing="false" onAction="#handlerBackMenu" prefHeight="54.0" prefWidth="58.0" text="Volver">
+               <font>
+                  <Font name="Georgia" size="13.0" />
+               </font>
+            </Button>
+            <Button id="closeWindow" fx:id="closeWindow" minHeight="30.0" mnemonicParsing="false" onAction="#handlerCloseWindow" prefHeight="80.0" prefWidth="29.0" text="X">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
