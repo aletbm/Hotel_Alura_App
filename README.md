@@ -37,16 +37,11 @@ El líder del proyecto puso a disposición el siguiente Diagrama de Entidad Rela
 
 <div align="center"><img src="readme_img/entidad-relacion.png" width="600"/></div>
 
-Como extra he añadido un tercera tabla para guardar el datos de acceso a la plataforma:
+Como extra he añadido una tercera tabla para guardar los datos de acceso a la plataforma:
 
 <div align="center"><img src="readme_img/login.png" width="600"/></div>
 
 ------
-
-### Extras:
-- Como desafío extra nos animan a que dejemos fluir nuestra creatividad, si puedo convertir divisas, ¿tal vez pueda añadir a mi programa otros tipos de conversiones como temperatura por ejemplo?
-
-- Es hora de sorprender a nuestro cliente con una función que tal vez ni siquiera sabía que necesitaba.
 
 ### 👁️ Vista previa:
 ![SegmentLocal](readme_img/previewHotel.gif "segment")
